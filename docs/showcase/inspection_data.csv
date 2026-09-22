@@ -1,0 +1,6 @@
+inspection_time,asset,target_north_m,target_east_m,target_down_m,measured_north_m,measured_east_m,measured_down_m,camera_status,image_file
+2026-09-20T22:41:37,Transformer A west,-12.0,28.0,-10.0,-11.622,27.171,-10.064,CAPTURED,images/01_transformer_a_west.png
+2026-09-20T22:41:46,Transformer B west,12.0,28.0,-10.0,11.019,27.61,-10.123,CAPTURED,images/02_transformer_b_west.png
+2026-09-20T22:41:56,Transformer A east,-12.0,47.0,-10.0,-11.539,45.982,-10.3,CAPTURED,images/03_transformer_a_east.png
+2026-09-20T22:42:06,Transformer B east,12.0,47.0,-10.0,10.916,46.84,-10.23,CAPTURED,images/04_transformer_b_east.png
+2026-09-20T22:42:14,High-voltage gantry,0.0,50.0,-18.0,0.539,49.778,-17.002,CAPTURED,images/05_high_voltage_gantry.png

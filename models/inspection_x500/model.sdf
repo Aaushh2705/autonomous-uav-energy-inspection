@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version="1.9">
+  <model name="inspection_x500">
+    <include merge="true">
+      <uri>model://x500</uri>
+    </include>
+    <link name="camera_link">
+      <!-- Pitch the forward camera 40 degrees downward so elevated inspection
+           passes frame substation equipment instead of only the horizon. -->
+      <pose relative_to="base_link">0.12 0.03 0.242 0 0.698132 0</pose>
+      <inertial>
+        <mass>0.05</mass>
+        <inertia>
+          <ixx>0.00004</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.00004</iyy><iyz>0</iyz><izz>0.00004</izz>
+        </inertia>
+      </inertial>
+      <visual name="housing">
+        <geometry><box><size>0.02 0.04 0.04</size></box></geometry>
+        <material><ambient>0.08 0.08 0.09 1</ambient><diffuse>0.12 0.12 0.14 1</diffuse></material>
+      </visual>
+      <visual name="lens">
+        <pose>0.015 0 0 0 1.5708 0</pose>
+        <geometry><cylinder><radius>0.008</radius><length>0.01</length></cylinder></geometry>
+        <material><ambient>0.1 0.16 0.3 1</ambient><diffuse>0.12 0.2 0.42 1</diffuse></material>
+      </visual>
+      <sensor name="inspection_camera" type="camera">
+        <gz_frame_id>camera_link</gz_frame_id>
+        <camera>
+          <horizontal_fov>1.35</horizontal_fov>
+          <image><width>640</width><height>480</height><format>R8G8B8</format></image>
+          <clip><near>0.1</near><far>300</far></clip>
+        </camera>
+        <always_on>true</always_on>
+        <update_rate>10</update_rate>
+        <visualize>true</visualize>
+      </sensor>
+    </link>
+    <joint name="InspectionCameraJoint" type="fixed">
+      <parent>base_link</parent>
+      <child>camera_link</child>
+    </joint>
+  </model>
+</sdf>

@@ -1,0 +1,19 @@
+# ROS 2 / colcon outputs
+build/
+install/
+log/
+
+# Python caches and local tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.vscode/
+.idea/
+
+# Generated mission runs. A verified example is kept under docs/showcase/.
+data/
+
+# Runtime and editor files
+*.log
+*.swp
+*~
